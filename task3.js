@@ -28,7 +28,11 @@ const logError = id => {
 };
 
 
-makeTransaction({ id: 70, amount: 150 })
+
+const task3Btn = document.querySelector('.task3');
+
+const onTask3 = () => {
+  makeTransaction({ id: 70, amount: 150 })
   .then(logSuccess)
   .catch(logError);
 
@@ -43,3 +47,8 @@ makeTransaction({ id: 72, amount: 75 })
 makeTransaction({ id: 73, amount: 100 })
   .then(logSuccess)
   .catch(logError);
+
+}
+task3Btn.addEventListener('click', onTask3);
+
+

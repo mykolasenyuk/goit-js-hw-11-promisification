@@ -14,8 +14,15 @@ const toggleUserState = (allUsers, userName,) => {
 
 };
 
-const logger = updatedUsers => console.table(updatedUsers);
+const logger1 = updatedUsers => console.table(updatedUsers);
 
 
-toggleUserState(users, 'Mango').then(logger);
-toggleUserState(users, 'Lux').then(logger);
+
+const task2Btn = document.querySelector('.task2');
+
+const onTask2 = () => {
+  
+toggleUserState(users, 'Mango').then(logger1);
+toggleUserState(users, 'Lux').then(logger1);
+}
+task2Btn.addEventListener('click', onTask2);
